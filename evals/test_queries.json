@@ -1,0 +1,107 @@
+[
+  {
+    "id": "Q01",
+    "category": "Thermal & Atmosphere",
+    "query": "Plote o perfil térmico (temperatura externa vs. interna) por faixa de altitude e destaque a tropopausa.",
+    "expected_metrics": ["temp_externa_min_c", "tropopausa_altitude_m"],
+    "requires_plot": true
+  },
+  {
+    "id": "Q02",
+    "category": "Aerodynamics & Flight Dynamics",
+    "query": "Calcule a taxa média de subida (m/s) e a velocidade máxima na descida logo após o burst.",
+    "expected_metrics": ["taxa_media_subida_mps", "velocidade_maxima_descida_mps"],
+    "requires_plot": true
+  },
+  {
+    "id": "Q03",
+    "category": "Anomalies & Correlation",
+    "query": "Houve algum momento em que o giroscópio indicou rotação anômala enquanto a pressão falhava?",
+    "expected_metrics": ["rotacao_maxima_dps", "pressao_minima_hpa"],
+    "requires_plot": true
+  },
+  {
+    "id": "Q04",
+    "category": "Barometry & Atmosphere",
+    "query": "Gere o perfil de pressão atmosférica (hPa) em função da altitude GPS e verifique o ponto de menor pressão no apogeu.",
+    "expected_metrics": ["pressao_minima_hpa", "apogeu_altitude_m"],
+    "requires_plot": true
+  },
+  {
+    "id": "Q05",
+    "category": "Power & Hardware Health",
+    "query": "Analise o comportamento de tensão da bateria (V) ao longo do tempo e identifique se houve queda térmica acentuada.",
+    "expected_metrics": ["tensao_minima_v", "tempo_tensao_minima_s"],
+    "requires_plot": true
+  },
+  {
+    "id": "Q06",
+    "category": "Flight Dynamics",
+    "query": "Plote a velocidade vertical instantânea (m/s) durante todo o voo e destaque o momento exato do apogeu/burst.",
+    "expected_metrics": ["tempo_burst_s", "velocidade_max_mps"],
+    "requires_plot": true
+  },
+  {
+    "id": "Q07",
+    "category": "IMU & Turbulence",
+    "query": "Existe correlação entre a turbulência no giroscópio (dps) e a passagem pela camada da tropopausa?",
+    "expected_metrics": ["pico_giroscopio_dps", "altitude_turbulencia_m"],
+    "requires_plot": true
+  },
+  {
+    "id": "Q08",
+    "category": "Navigation & Trajectory",
+    "query": "Trace a trajetória de voo em 3D usando latitude, longitude e altitude.",
+    "expected_metrics": ["deslocamento_km"],
+    "requires_plot": true
+  },
+  {
+    "id": "Q09",
+    "category": "Structural & Shock",
+    "query": "Calcule a desaceleração instantânea e o choque sofrido pela carga útil no momento do estouro do balão.",
+    "expected_metrics": ["aceleracao_burst_g", "tempo_burst_s"],
+    "requires_plot": true
+  },
+  {
+    "id": "Q10",
+    "category": "Data Integrity & Storage",
+    "query": "Verifique a integridade do link de telemetria e o contador de pacotes: houve perda de pacotes no MicroSD?",
+    "expected_metrics": ["pacotes_perdidos", "total_pacotes"],
+    "requires_plot": false
+  },
+  {
+    "id": "Q11",
+    "category": "Sensor Fusion & Discrepancies",
+    "query": "Compare a altitude estimada pelo barômetro com a altitude fornecida pelo GPS e identifique eventuais discrepâncias perto do apogeu.",
+    "expected_metrics": ["erro_max_altitude_m", "discrepancia_media_m"],
+    "requires_plot": true
+  },
+  {
+    "id": "Q12",
+    "category": "Thermal Extremes",
+    "query": "Qual foi a temperatura mínima absoluta registrada e em qual altitude exata e tempo de voo ela ocorreu?",
+    "expected_metrics": ["temperatura_minima_c", "altitude_temperatura_minima_m"],
+    "requires_plot": false
+  },
+  {
+    "id": "Q13",
+    "category": "Mission Milestones",
+    "query": "Calcule o tempo total decorrido da decolagem até o apogeu e do apogeu até o pouso.",
+    "expected_metrics": ["tempo_subida_min", "tempo_descida_min", "duracao_total_min"],
+    "requires_plot": false
+  },
+  {
+    "id": "Q14",
+    "category": "IMU & Dynamics",
+    "query": "Plote a magnitude da aceleração triaxial (g) e verifique os picos no lançamento, burst e impacto de pouso.",
+    "expected_metrics": ["pico_impacto_pouso_g", "aceleracao_burst_g"],
+    "requires_plot": true
+  },
+  {
+    "id": "Q15",
+    "category": "Recovery & Geodesics",
+    "query": "Qual foi a distância geodésica em linha reta entre as coordenadas de lançamento e o ponto final de pouso?",
+    "expected_metrics": ["distancia_recuperacao_km", "coordenadas_pouso"],
+    "requires_plot": true
+  }
+]
